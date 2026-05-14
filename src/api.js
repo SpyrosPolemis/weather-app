@@ -7,9 +7,10 @@ async function getWeatherData(location) {
 }
 
 function processWeatherData(weatherData) {
-  return {
+  const processedData = {
     resolvedAddress: weatherData.resolvedAddress,
     days: weatherData.days.map((day) => ({
+      datetime: new Date(day.datetime),
       description: day.description,
       feelsLike: day.feelsLike,
       humidity: day.humidity,
@@ -20,6 +21,8 @@ function processWeatherData(weatherData) {
       uvindex: day.uvindex,
     })),
   };
+  processedData.days.pop(); // Only need 7 days
+  return processedData;
 }
 
 export { getWeatherData, processWeatherData };

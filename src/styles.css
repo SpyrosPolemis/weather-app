@@ -7,7 +7,7 @@
 body {
   background-color: #f5f4f1;
   display: grid;
-  grid-template-rows: 10vh 40vh 30vh;
+  grid-template-rows: 10vh 55vh 25vh;
   row-gap: calc(10vh / 3);
   min-height: 100vh;
   margin: 0 auto;
@@ -20,9 +20,10 @@ body {
   background-color: #fff;
   justify-content: space-between;
   padding: 0px 24px;
-  border-radius: 20px;
-  margin: 12px 48px;
+  border-radius: 0px 0px 20px 20px;
+  margin: 0px 48px;
   border: solid 2px black;
+  border-top: none;
 }
 
 input {
@@ -44,7 +45,15 @@ input:focus {
 
 #daily-view,
 #weekly-view {
-  height: 100px;
+  height: 100%;
+  border: 1px solid black;
+}
+
+#daily-view {
+  margin: 0 16px;
+  padding: 16px;
+  width: 60%;
+  margin: 0 auto;
 }
 
 /* Weekly View */
