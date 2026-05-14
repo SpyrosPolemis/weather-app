@@ -12,7 +12,7 @@ function processWeatherData(weatherData) {
     days: weatherData.days.map((day) => ({
       datetime: new Date(day.datetime),
       description: day.description,
-      feelsLike: day.feelsLike,
+      conditions: day.conditions,
       humidity: day.humidity,
       temp: day.temp,
       tempmin: day.tempmin,

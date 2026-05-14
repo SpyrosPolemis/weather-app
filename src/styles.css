@@ -54,6 +54,16 @@ input:focus {
   padding: 16px;
   width: 60%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#daily-temp {
+  display: flex;
+}
+
+#daily-details {
+  display: flex;
 }
 
 /* Weekly View */
