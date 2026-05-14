@@ -1,3 +1,50 @@
-body {
-  background-color: rebeccapurple;
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
 }
+
+body {
+  background-color: #f6f5f3;
+  display: grid;
+  grid-template-rows: 10vh 40vh 30vh;
+  row-gap: calc(10vh / 3);
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+/* Search Bar */
+
+#search-container {
+  display: flex;
+  background-color: #fff;
+  justify-content: space-between;
+  padding: 0px 24px;
+  border-radius: 20px;
+  margin: 12px 48px;
+  border: solid 2px black;
+}
+
+input {
+  border: none;
+  flex-basis: 70%;
+  font-size: clamp(1rem, 2.5rem, 2.5rem);
+}
+
+input:focus {
+  outline: none;
+}
+
+#search-container > button {
+  background-color: #fff;
+  border: none;
+}
+
+/* Daily View */
+
+#daily-view,
+#weekly-view {
+  height: 100px;
+}
+
+/* Weekly View */
