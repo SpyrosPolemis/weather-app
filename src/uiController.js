@@ -24,7 +24,12 @@ export const uiController = {
     dayUV.textContent = date.uvindex + "uv";
   },
 
-  displayWeek(week) {
-    return;
+  displayWeek(weekToDisplay) {
+    weekToDisplay.forEach((day) => {
+      const dayDiv = document.createElement("div");
+      dayDiv.classList.add("day-card");
+      dayDiv.append(day.datetime);
+      week.append(dayDiv);
+    });
   },
 };

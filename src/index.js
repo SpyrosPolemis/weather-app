@@ -10,4 +10,5 @@ search.addEventListener("submit", async (e) => {
   const rawWeatherData = await getWeatherData(searchInput.value);
   const weatherData = await processWeatherData(rawWeatherData);
   uiController.displayDate(weatherData.days[0]);
+  uiController.displayWeek(weatherData.days);
 });
