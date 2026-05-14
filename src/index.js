@@ -1,4 +1,10 @@
 import "./styles.css";
-import getWeather from "./api.js";
+import { getWeatherData } from "./api.js";
 
-getWeatherData("Athens");
+const search = document.querySelector("#search");
+const searchInput = document.querySelector("#search-input");
+search.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  getWeatherData(searchInput.value);
+});

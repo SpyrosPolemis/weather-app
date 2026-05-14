@@ -15,7 +15,7 @@ body {
 
 /* Search Bar */
 
-#search-container {
+#search {
   display: flex;
   background-color: #fff;
   justify-content: space-between;
@@ -35,7 +35,7 @@ input:focus {
   outline: none;
 }
 
-#search-container > button {
+#search > button {
   background-color: #fff;
   border: none;
 }
