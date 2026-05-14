@@ -1,3 +1,4 @@
 import "./styles.css";
-console.log("Working! Yipeeee!");
-const myMom = "mom";
+import getWeather from "./api.js";
+
+getWeatherData("Athens");
