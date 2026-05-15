@@ -16,11 +16,12 @@ let selectedDay = null;
 
 export const uiController = {
   displayDate(date) {
+    day.className = setCondition(date);
     dayDate.textContent = format(date.datetime, "MMMM do");
     dayDesc.textContent = date.description;
-    dayTemp.textContent = date.temp;
-    tempMax.textContent = date.tempmax;
-    tempMin.textContent = date.tempmin;
+    dayTemp.textContent = date.temp + `°C`;
+    tempMax.textContent = "High of " + date.tempmax + `°C`;
+    tempMin.textContent = "Low of " + date.tempmin + `°C`;
     dayHumidity.textContent = "Humidity: " + date.humidity;
     dayPrecipitation.textContent = "Precipitation: " + date.precip;
     dayUV.textContent = "UV Index: " + date.uvindex;
@@ -49,12 +50,15 @@ export const uiController = {
 
 function populateWeekCard(day) {
   const details = document.createElement("div");
-  // date, temp, conditions,
+  details.classList.add("day-preview");
+
   const date = document.createElement("div");
+  date.classList.add("date-preview");
   const temp = document.createElement("div");
+  temp.classList.add("temp-preview");
 
   date.textContent = format(day.datetime, "MMMM do");
-  temp.textContent = day.temp;
+  temp.textContent = day.temp + `°C`;
 
   details.append(date, temp);
   return details;
