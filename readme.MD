@@ -5,7 +5,7 @@
 - Quickly tell the conditions of any given day in the week
 - Click a day in the next week to see more details
 
-Live Link: https://spyrospolemis.github.io/Weather-App/
+Live Link: https://spyrospolemis.github.io/weather-app/
 
 # Tech Stack:
 
