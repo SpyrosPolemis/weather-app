@@ -56,14 +56,36 @@ input:focus {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  gap: 12px;
+}
+
+#daily-date {
+  font-size: 4rem;
+}
+
+#daily-desc {
+  font-size: 2rem;
 }
 
 #daily-temp {
   display: flex;
+  gap: 8px;
+}
+
+#avg-temp {
+  font-size: 2.5rem;
+}
+
+#temp-minmax {
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+  font-size: 1.2rem;
 }
 
 #daily-details {
   display: flex;
+  justify-content: space-around;
 }
 
 /* Weekly View */

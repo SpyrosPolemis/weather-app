@@ -14,22 +14,25 @@ import { format } from "date-fns";
 export const uiController = {
   displayDate(date) {
     console.log(date);
-    dayDate.textContent = format(date.datetime, "MMMM co");
+    dayDate.textContent = format(date.datetime, "MMMM do");
     dayDesc.textContent = date.description;
     dayTemp.textContent = date.temp;
     tempMax.textContent = date.tempmax;
     tempMin.textContent = date.tempmin;
-    dayHumidity.textContent = date.humidity + "humid";
-    dayPrecipitation.textContent = date.precip + "rain";
-    dayUV.textContent = date.uvindex + "uv";
+    dayHumidity.textContent = "Humidity: " + date.humidity;
+    dayPrecipitation.textContent = "Precipitation: " + date.precip;
+    dayUV.textContent = "UV Index: " + date.uvindex;
   },
 
   displayWeek(weekToDisplay) {
     weekToDisplay.forEach((day) => {
-      const dayDiv = document.createElement("div");
-      dayDiv.classList.add("day-card");
-      dayDiv.append(day.datetime);
-      week.append(dayDiv);
+      const dayCard = document.createElement("button");
+      dayCard.addEventListener("click", () => {
+        this.displayDate(day);
+      });
+      dayCard.classList.add("day-card");
+      dayCard.append(day.datetime);
+      week.append(dayCard);
     });
   },
 };
